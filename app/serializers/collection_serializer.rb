@@ -1,4 +1,4 @@
 class CollectionSerializer < ActiveModel::Serializer
-  attributes :id, :name
-  belongs_to :user
+  attributes :id, :name, :created_at
+  belongs_to   :user
 end
