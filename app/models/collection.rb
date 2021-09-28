@@ -1,4 +1,4 @@
 class Collection < ApplicationRecord
-  has_many_attached :pictures
+  has_many :pictures
   belongs_to :user
 end
