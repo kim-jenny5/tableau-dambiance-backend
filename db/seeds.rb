@@ -13,22 +13,29 @@ vibes = Collection.create(name: "vibey illustrations", user_id: 1)
 doges = Collection.create(name: "Cute Doggos", user_id: 1)
 random = Collection.create(name: "Random Sample", user_id: 2)
 
+# Picture.create.img_file.attach(io: File.open("/Users/yunjeonk/Documents/Flatiron/Javascript Project/Collection Pictures/fall/fall#{x+1}.jpeg"), filename: "fall#{x+1}.jpeg")
+
 8.times do |x|
     # fall.pictures.attach(io: File.open("/Users/yunjeonk/Documents/Flatiron/Javascript Project/Collection Pictures/fall/fall#{x+1}.jpeg"), filename: "fall#{x+1}.jpeg")
-    Picture.new.img_file.attach(io: File.open("/Users/yunjeonk/Documents/Flatiron/Javascript Project/Collection Pictures/fall/fall#{x+1}.jpeg"), filename: "fall#{x+1}.jpeg")
+    # Picture.new.img_file.attach(io: File.open("/Users/yunjeonk/Documents/Flatiron/Javascript Project/Collection Pictures/fall/fall#{x+1}.jpeg"), filename: "fall#{x+1}.jpeg")
+    pic = Picture.create(collection_id: 1)
+    pic.img_file.attach(io: File.open("/Users/yunjeonk/Documents/Flatiron/Javascript Project/Collection Pictures/fall/fall#{x+1}.jpeg"), filename: "fall#{x+1}.jpeg")
 end
 
 6.times do |x|
     # vibes.pictures.attach(io: File.open("/Users/yunjeonk/Documents/Flatiron/Javascript Project/Collection Pictures/vibes/vibe#{x+1}.jpeg"), filename: "vibe#{x+1}.jpeg")
-    Picture.new.img_file.attach(io: File.open("/Users/yunjeonk/Documents/Flatiron/Javascript Project/Collection Pictures/vibes/vibe#{x+1}.jpeg"), filename: "vibe#{x+1}.jpeg")
+    pic = Picture.create(collection_id: 2)
+    pic.img_file.attach(io: File.open("/Users/yunjeonk/Documents/Flatiron/Javascript Project/Collection Pictures/vibes/vibe#{x+1}.jpeg"), filename: "vibe#{x+1}.jpeg")
 end
 
 6.times do |x|
     # doges.pictures.attach(io: File.open("/Users/yunjeonk/Documents/Flatiron/Javascript Project/Collection Pictures/dogs/dog#{x+1}.jpeg"), filename: "dog#{x+1}.jpeg")
-    Picture.new.img_file.attach(io: File.open("/Users/yunjeonk/Documents/Flatiron/Javascript Project/Collection Pictures/dogs/dog#{x+1}.jpeg"), filename: "dog#{x+1}.jpeg")
+    pic = Picture.create(collection_id: 3)
+    pic.img_file.attach(io: File.open("/Users/yunjeonk/Documents/Flatiron/Javascript Project/Collection Pictures/dogs/dog#{x+1}.jpeg"), filename: "dog#{x+1}.jpeg")
 end
 
 7.times do |x|
     # random.pictures.attach(io: File.open("/Users/yunjeonk/Documents/Flatiron/Javascript Project/Collection Pictures/random/random#{x+1}.jpeg"), filename: "random#{x+1}.jpeg")
-    Picture.new.img_file.attach(io: File.open("/Users/yunjeonk/Documents/Flatiron/Javascript Project/Collection Pictures/random/random#{x+1}.jpeg"), filename: "random#{x+1}.jpeg")
+    pic = Picture.create(collection_id: 4)
+    pic.img_file.attach(io: File.open("/Users/yunjeonk/Documents/Flatiron/Javascript Project/Collection Pictures/random/random#{x+1}.jpeg"), filename: "random#{x+1}.jpeg")
 end

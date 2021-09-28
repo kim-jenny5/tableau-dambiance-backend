@@ -1,5 +1,5 @@
 class CollectionSerializer < ActiveModel::Serializer
-  attributes :id, :name, :created_at
+  attributes :id, :name, :pictures, :created_at
   belongs_to :user
 
   # def pictures

@@ -1,5 +1,5 @@
 class PictureSerializer < ActiveModel::Serializer
-  attributes :id, :filename
+  attributes :id
   # has_one :collection
   belongs_to :collection
 end
