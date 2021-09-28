@@ -1,6 +1,7 @@
 class CollectionSerializer < ActiveModel::Serializer
-  attributes :id, :name, :pictures, :created_at
+  attributes :id, :name, :created_at
   belongs_to :user
+  has_many :pictures
 
   # def pictures
   #   ActiveStorage::Blob.all
