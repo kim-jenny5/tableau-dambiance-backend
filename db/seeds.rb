@@ -13,19 +13,18 @@ vibes = Collection.create(name: "vibey illustrations", user_id: 1)
 doges = Collection.create(name: "Cute Doggos", user_id: 1)
 random = Collection.create(name: "Random Sample", user_id: 2)
 
-# 8.times do |x|
-#     fall.pictures.attach(io: File.open(Rails.root.join(`public/fall/fall#{x+1}.jpeg`)), filename: `fall#{x+1}.jpeg`)
-# end
+8.times do |x|
+    fall.pictures.attach(io: File.open("/Users/yunjeonk/Documents/Flatiron/Javascript Project/Collection Pictures/fall/fall#{x+1}.jpeg"), filename: "fall#{x+1}.jpeg")
+end
 
-# 6.times do |x|
-#     vibes.pictures.attach(io: File.open(Rails.root.join(`public/vibes/vibe#{x+1}.jpeg`)), filename: `vibe#{x+1}.jpeg`)
-# end
+6.times do |x|
+    vibes.pictures.attach(io: File.open("/Users/yunjeonk/Documents/Flatiron/Javascript Project/Collection Pictures/vibes/vibe#{x+1}.jpeg"), filename: "vibe#{x+1}.jpeg")
+end
 
-# 6.times do |x|
-#     doges.pictures.attach(io: File.open(Rails.root.join(`public/dogs/dog#{x+1}.jpeg`)), filename: `dog#{x+1}.jpeg`)
-# end
+6.times do |x|
+    doges.pictures.attach(io: File.open("/Users/yunjeonk/Documents/Flatiron/Javascript Project/Collection Pictures/dogs/dog#{x+1}.jpeg"), filename: "dog#{x+1}.jpeg")
+end
 
-# 7.times do |x|
-#     random.pictures.attach(io: File.open(Rails.root.join(`public/random/random#{x+1}.jpeg`)), filename: `random#{x+1}.jpeg`)
-# end
-
+7.times do |x|
+    random.pictures.attach(io: File.open("/Users/yunjeonk/Documents/Flatiron/Javascript Project/Collection Pictures/random/random#{x+1}.jpeg"), filename: "random#{x+1}.jpeg")
+end
