@@ -1,15 +1,15 @@
 class PicturesController < ApplicationController
     def index
         pictures = Picture.all
-        render json: pictures.map { |img| ({ id: img.id, img_file: url_for(img), collection: img.collection })}
-        # render json: pictures
+        # render json: pictures.map { |img| ({ id: img.id, img_file: url_for(img), collection: img.collection })}
+        render json: pictures
     end
 
-    def show
-        # byebug
-        picture = Picture.find(params[:id])
-        render json: picture
-    end
+    # def show
+    #     # byebug
+    #     picture = Picture.find(params[:id])
+    #     render json: picture
+    # end
 
     def create
         picture = Picture.new(picture_params)
