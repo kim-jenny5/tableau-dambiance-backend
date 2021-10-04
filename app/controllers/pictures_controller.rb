@@ -5,23 +5,22 @@ class PicturesController < ApplicationController
         render json: pictures
     end
 
-    # def show
-    #     # byebug
-    #     picture = Picture.find(params[:id])
-    #     render json: picture
-    # end
-
     def create
         picture = Picture.new(picture_params)
+
+        if picture.save
+            render json: picture
+        else
+            render json: {error: "Picture couldn't be saved."}
+        end
     end
 
-    def destroy
-        
-    end
+    # def destroy
+    # end
 
     private
     
     def picture_params
-        # params.require(:picture).permit(:collection_id)
+        params.require(:picture).permit(:collection_id)
     end
 end
