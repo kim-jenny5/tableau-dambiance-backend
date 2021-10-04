@@ -4,16 +4,16 @@ class CollectionsController < ApplicationController
         render json: collections
     end
 
-    def create
-        collection = Collection.new(collection_params)
+    # def create
+    #     collection = Collection.new(collection_params)
         
-        if collection.save
-            render json: collection
-        else
-            render json: {error: "Collection couldn't be saved."}
-        end
-        # byebug
-    end
+    #     if collection.save
+    #         render json: collection
+    #     else
+    #         render json: {error: "Collection couldn't be saved."}
+    #     end
+    #     # byebug
+    # end
 
     # def destroy
     # end

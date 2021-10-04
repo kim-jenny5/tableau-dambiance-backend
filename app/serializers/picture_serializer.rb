@@ -1,5 +1,6 @@
 class PictureSerializer < ActiveModel::Serializer
   attributes :id, :url
+  # attributes :id
   belongs_to :collection
 
   def url
