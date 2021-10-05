@@ -5,9 +5,11 @@ class UsersController < ApplicationController
     end
 
     def create
-        user = User.new(user_params)
+        # user = User.new(user_params)
 
-        if user.save
+        user = User.find_or_create_by(user_params)
+
+        if user.valid?
             render json: user
         else
             render json: {error: "User couldn't be saved."}
