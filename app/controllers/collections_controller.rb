@@ -8,7 +8,12 @@ class CollectionsController < ApplicationController
         collection = Collection.new(collection_params)
 
         if collection.name.blank?
-            collection.name = "untitled"
+            arr = collection.user.collections.select { |c| c.name == "untitled" }
+            if arr.length > 0
+                collection.name = "untitled-#{arr.length+1}"
+            else
+                collection.name = "untitled"
+            end
         end
         
         if collection.save
@@ -16,7 +21,6 @@ class CollectionsController < ApplicationController
         else
             render json: {error: "Collection couldn't be saved."}
         end
-        # byebug
     end
 
     # def destroy
