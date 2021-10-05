@@ -10,7 +10,7 @@ class CollectionsController < ApplicationController
         if collection.name.blank?
             arr = collection.user.collections.select { |c| c.name == "untitled" }
             if arr.length > 0
-                collection.name = "untitled-#{arr.length+1}"
+                collection.name = "untitled-#{arr.length}"
             else
                 collection.name = "untitled"
             end
