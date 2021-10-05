@@ -6,6 +6,10 @@ class CollectionsController < ApplicationController
 
     def create
         collection = Collection.new(collection_params)
+
+        if collection.name.blank?
+            collection.name = "untitled"
+        end
         
         if collection.save
             render json: collection
