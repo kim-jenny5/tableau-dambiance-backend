@@ -8,7 +8,7 @@ class CollectionsController < ApplicationController
         collection = Collection.new(collection_params)
 
         if collection.name.blank?
-            arr = collection.user.collections.select { |c| c.name == "untitled" }
+            arr = collection.user.collections.select { |c| c.name.include?("untitled") }
             if arr.length > 0
                 collection.name = "untitled-#{arr.length}"
             else
