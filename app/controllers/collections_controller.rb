@@ -25,7 +25,6 @@ class CollectionsController < ApplicationController
 
     def update
         collection = Collection.find_by_id(params[:id])
-        # byebug
 
         if collection.update(collection_params)
             render json: collection
@@ -34,8 +33,11 @@ class CollectionsController < ApplicationController
         end
     end
 
-    # def destroy
-    # end
+    def destroy
+        collection = Collection.find_by_id(params[:id])
+        collection.destroy
+        render json: {message: "#{collection.name} has been successfully deleted."}
+    end
 
     private
     
