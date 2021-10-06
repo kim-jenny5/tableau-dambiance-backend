@@ -23,6 +23,17 @@ class CollectionsController < ApplicationController
         end
     end
 
+    def update
+        collection = Collection.find_by_id(params[:id])
+        # byebug
+
+        if collection.update(collection_params)
+            render json: collection
+        else
+            render json: {error: "Collection couldn't be updated."}
+        end
+    end
+
     # def destroy
     # end
 
