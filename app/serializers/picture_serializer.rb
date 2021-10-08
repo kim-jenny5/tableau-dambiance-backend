@@ -4,6 +4,6 @@ class PictureSerializer < ActiveModel::Serializer
   belongs_to :collection
 
   def url
-    Rails.application.routes.url_helpers.rails_blob_path(object.img_file, only_path: true)
+    Rails.application.routes.url_helpers.rails_blob_path(object.img_file, object.signed_id, object.filename, only_path: true)
   end
 end

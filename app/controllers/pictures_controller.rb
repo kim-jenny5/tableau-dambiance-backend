@@ -8,6 +8,8 @@ class PicturesController < ApplicationController
     # def create
     #     picture = Picture.new(picture_params)
 
+    #     # byebug
+
     #     if picture.save
     #         render json: picture
     #     else
