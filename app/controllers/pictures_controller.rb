@@ -5,17 +5,19 @@ class PicturesController < ApplicationController
         render json: pictures
     end
 
-    # def create
-    #     picture = Picture.new(picture_params)
+    def create
+        # picture = Picture.new(picture_params)
 
-    #     # byebug
+
+
+        # byebug
 
     #     if picture.save
     #         render json: picture
     #     else
     #         render json: {error: "Picture couldn't be saved."}
     #     end
-    # end
+    end
 
     # def destroy
     # end
