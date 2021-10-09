@@ -6,17 +6,14 @@ class PicturesController < ApplicationController
     end
 
     def create
-        # picture = Picture.new(picture_params)
-
-
-
+        picture = Picture.new(picture_params)
         # byebug
-
-    #     if picture.save
-    #         render json: picture
-    #     else
-    #         render json: {error: "Picture couldn't be saved."}
-    #     end
+        # picture.img_file.attach(picture_params[:img_file])
+        if picture.save
+            render json: picture
+        else
+            render json: {error: "Picture couldn't be saved."}
+        end
     end
 
     # def destroy
@@ -25,6 +22,7 @@ class PicturesController < ApplicationController
     private
     
     def picture_params
-        params.require(:picture).permit(:collection_id, :img_file)
+        # params.require(:picture).permit(:collection_id, :img_file)
+        params.permit(:collection_id, :img_file)
     end
 end
