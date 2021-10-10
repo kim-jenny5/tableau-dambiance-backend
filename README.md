@@ -4,10 +4,6 @@
 
 Tableau d'Ambiance is a picture board SPA (single-padge application), similar to that of VSCO/Tumblr, where users can create "collections," or albums and upload photos onto said collections. Due to the nature of this application, it does not have any secure user authentications (at least at this moment). Therefore, other users are able to see the pictures you upload if they get ahold of your username. On the other hand, this is a great application to share with your friends to create public photo albums to immortalize your memories!
 
-### Why?
-
-2020 was a rough year for everyone and the past 2 years allowed me to ruminate on the fact that I didn't have that many photos of my loved ones to begin with. The idea for this application began with my personal hope to take more pictures of my life and to share with others around me.
-
 ## Tech Stack
 
 My backend was a Rails API and my frontend was done using vanilla JavaScript and HTML. I also configured Active Storage to handle picture file uploads and used Amazon S3 to handle the storing of the Active Storage attachments to the cloud.
