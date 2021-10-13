@@ -10,7 +10,7 @@ class PicturesController < ApplicationController
         if picture.save
             render json: picture
         else
-            render json: {error: "Picture couldn't be saved."}
+            render json: {error: "Picture couldn't be added. Please upload it again."}
         end
     end
 

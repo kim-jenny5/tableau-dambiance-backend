@@ -10,7 +10,7 @@ class UsersController < ApplicationController
             if user.save
                 render json: user
             else
-                render json: {error: "User couldn't be created. Please try again."}
+                render json: {error: "User couldn't be saved. Please try again."}
             end
         end
     end
