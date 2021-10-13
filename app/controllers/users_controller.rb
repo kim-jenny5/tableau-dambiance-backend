@@ -4,13 +4,14 @@ class UsersController < ApplicationController
         render json: users
     end
 
-    def create
-        user = User.new(user_params)
-
-        if user.save
-            render json: user
-        else
-            render json: {error: "User couldn't be saved."}
+    def create        
+        if !User.all.find_by_username(user_params["username"])
+            user = User.new(user_params)
+            if user.save
+                render json: user
+            else
+                render json: {error: "User couldn't be created. Please try again."}
+            end
         end
     end
 
