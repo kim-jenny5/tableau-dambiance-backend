@@ -6,7 +6,7 @@ Tableau d'Ambiance is a picture board SPA (single-padge application), similar to
 
 ## Tech Stack
 
-My backend was a Rails API and my frontend was done using vanilla JavaScript and HTML. I also configured Active Storage to handle picture file uploads and used Amazon S3 to handle the storing of the Active Storage attachments to the cloud.
+My [backend](https://github.com/kim-jenny5/tableau-dambiance-backend) was a Rails API and my frontend was done using vanilla JavaScript and HTML. Active Storage was also configured to handle picture file uploads and Amazon S3 cloud storage was used to handle the storing of the Active Storage attachments.
 
 CSS and Bootstrap was used as well to design the frontend.
 
@@ -18,6 +18,10 @@ To get started:
 - Run `bundle` or `bundle install` to install the gems 💎
 - Run `rake db:migrate` as well as `rake db:seed` (to see sample lists and movies)
 - Run `rails s` in your console and go to `localhost:3000` in your browser to view locally
+
+To view the API live:
+
+- Visit [this link here](https://tableau-dambiance.herokuapp.com/)
 
 ## License
 
