@@ -6,7 +6,7 @@ Tableau d'Ambiance is a picture board SPA (single-padge application), similar to
 
 ## Tech Stack
 
-My [backend](https://github.com/kim-jenny5/tableau-dambiance-backend) was a Rails API and my frontend was done using vanilla JavaScript and HTML. Active Storage was also configured to handle picture file uploads and Amazon S3 cloud storage was used to handle the storing of the Active Storage attachments.
+My backend was a Rails API and my [frontend](https://github.com/kim-jenny5/tableau-dambiance-frontend) was done using vanilla JavaScript and HTML. Active Storage was also configured to handle picture file uploads and Amazon S3 cloud storage was used to handle the storing of the Active Storage attachments.
 
 CSS and Bootstrap was used as well to design the frontend.
 
